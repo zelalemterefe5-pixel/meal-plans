@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition, Grocery & Workout Plan</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #27ae60;
+            --accent: #2980b9;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+            --text-light: #666666;
+            --border: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding-bottom: 3rem;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        header p {
+            font-size: 0.85rem;
+            color: #bdc3c7;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #34495e;
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 0.5rem;
+            position: sticky;
+            top: 65px;
+            z-index: 999;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+            margin-right: 0.5rem;
+        }
+
+        nav a:hover, nav a:active {
+            background-color: var(--accent);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            scroll-margin-top: 130px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            color: var(--accent);
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        p.note {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        /* Tables for Mobile View */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 0.65rem 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: #f1f2f6;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        td.total-row {
+            font-weight: bold;
+            background-color: #f8f9fa;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+            font-size: 0.9rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        @media (min-width: 768px) {
+            header h1 { font-size: 1.5rem; }
+            table { font-size: 0.9rem; }
+            section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nutrition, Grocery & Workout Plan</h1>
+        <p>157 lbs | 1,280 kcal/day Target (~140g Protein) | Fulda, Germany</p>
+    </header>
+
+    <nav>
+        <a href="#meal-plan">Meal Plan</a>
+        <a href="#cost-analysis">Cost Analysis</a>
+        <a href="#grocery-stores">Stores</a>
+        <a href="#exercise">Exercise</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- SECTION 1: MEAL PLAN -->
+        <section id="meal-plan">
+            <h2>Weekly Meal Plan</h2>
+            
+            <h3>Standard Days (Mon, Tue, Thu, Sat, Sun)</h3>
+            <p class="note">Target: 1,280 kcal | ~142.5g Protein</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Meal</th>
+                            <th>Supermarket Items</th>
+                            <th>Protein</th>
+                            <th>Calories</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Morning</td>
+                            <td>Filter Coffee + 30 ml H-Milch (1.5%)</td>
+                            <td>1g</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Breakfast</td>
+                            <td>2 Boiled/Scrambled Eggs + 1 Tbsp Peanut/Almond Butter + 1 Slice Sauerteigbrot</td>
+                            <td>18g</td>
+                            <td>360</td>
+                        </tr>
+                        <tr>
+                            <td>Post-Breakfast</td>
+                            <td>1 Protein Shake (ESN Designer Whey with water)</td>
+                            <td>30g</td>
+                            <td>180</td>
+                        </tr>
+                        <tr>
+                            <td>Afternoon</td>
+                            <td>2 High-Protein Yogurts (Milbona / Ehrmann)</td>
+                            <td>40g</td>
+                            <td>180</td>
+                        </tr>
+                        <tr>
+                            <td>Dinner</td>
+                            <td>240g Mageres Rinderhack + 1.5 Cups Boiled Potatoes + Green Veggies</td>
+                            <td>53.5g</td>
+                            <td>510</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="2">TOTALS</td>
+                            <td>142.5g</td>
+                            <td>1,280</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Ethiopian Orthodox Fasting Days (Wed & Fri)</h3>
+            <p class="note">Target: 1,280 kcal | ~139g Protein (Zero Meat, Eggs, or Dairy)</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Meal</th>
+                            <th>Vegan Fasting Items</th>
+                            <th>Protein</th>
+                            <th>Calories</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Morning</td>
+                            <td>Filter Coffee + 110 ml Oat Milk (or 85 ml Barista Oat Milk)</td>
+                            <td>1g</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Breakfast</td>
+                            <td>Tofu Scramble (~180g Naturtofu) + 1 Tbsp Peanut/Almond Butter + 1 Slice Sauerteigbrot</td>
+                            <td>30g</td>
+                            <td>360</td>
+                        </tr>
+                        <tr>
+                            <td>Post-Breakfast</td>
+                            <td>1 Vegan Protein Shake (ESN Vegan Pro / Veganz with water)</td>
+                            <td>30g</td>
+                            <td>180</td>
+                        </tr>
+                        <tr>
+                            <td>Afternoon</td>
+                            <td>2 Vegan High-Protein Yogurts (Alpro Soy / Lindahls)</td>
+                            <td>32g</td>
+                            <td>180</td>
+                        </tr>
+                        <tr>
+                            <td>Dinner</td>
+                            <td>Misir Wot / Red Lentil Stew (2 cups cooked Rote Linsen) + 1.5 Cups Potatoes + Veggies</td>
+                            <td>46g</td>
+                            <td>510</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="2">TOTALS</td>
+                            <td>139.0g</td>
+                            <td>1,280</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 2: COST ANALYSIS -->
+        <section id="cost-analysis">
+            <h2>Monthly Cost Analysis (Fulda, Germany)</h2>
+            <p class="note">Calculated for 21 Standard Days and 9 Fasting Days per month.</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Monthly Quantity</th>
+                            <th>Store / Unit</th>
+                            <th>Total (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mageres Rinderhack</td>
+                            <td>~5.04 kg total</td>
+                            <td>ALDI / Lidl packs</td>
+                            <td>€45.00</td>
+                        </tr>
+                        <tr>
+                            <td>Fresh Eggs</td>
+                            <td>42 eggs</td>
+                            <td>ALDI / Lidl 10-packs</td>
+                            <td>€10.00</td>
+                        </tr>
+                        <tr>
+                            <td>Naturtofu</td>
+                            <td>~1.62 kg total</td>
+                            <td>ALDI / Lidl / dm blocks</td>
+                            <td>€6.00</td>
+                        </tr>
+                        <tr>
+                            <td>Rote Linsen</td>
+                            <td>~1.8 kg dry</td>
+                            <td>ALDI / Lidl 500g packs</td>
+                            <td>€5.00</td>
+                        </tr>
+                        <tr>
+                            <td>Kartoffeln</td>
+                            <td>~13.5 kg total</td>
+                            <td>ALDI / Lidl 2.5 kg sacks</td>
+                            <td>€13.50</td>
+                        </tr>
+                        <tr>
+                            <td>Sauerteigbrot</td>
+                            <td>2–3 loaves</td>
+                            <td>ALDI / Bakery</td>
+                            <td>€5.00</td>
+                        </tr>
+                        <tr>
+                            <td>High-Protein Dairy Yogurt</td>
+                            <td>42 cups</td>
+                            <td>Milbona / Ehrmann (200g)</td>
+                            <td>€41.50</td>
+                        </tr>
+                        <tr>
+                            <td>High-Protein Vegan Yogurt</td>
+                            <td>18 cups</td>
+                            <td>Alpro Soy / Lindahls</td>
+                            <td>€23.00</td>
+                        </tr>
+                        <tr>
+                            <td>Nut Butter</td>
+                            <td>~2 jars</td>
+                            <td>dm / ALDI jar</td>
+                            <td>€7.00</td>
+                        </tr>
+                        <tr>
+                            <td>Protein Powder</td>
+                            <td>Whey + Vegan Tins</td>
+                            <td>ESN / MyProtein / dm</td>
+                            <td>€25.00</td>
+                        </tr>
+                        <tr>
+                            <td>Milk & Oat Milk</td>
+                            <td>1L Cow + 1L Oat</td>
+                            <td>H-Milch & Haferdrink</td>
+                            <td>€2.00</td>
+                        </tr>
+                        <tr>
+                            <td>Veggies & Spices</td>
+                            <td>Monthly Supply</td>
+                            <td>Frozen Broccoli + Berbere</td>
+                            <td>€12.00</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="3">ESTIMATED TOTAL</td>
+                            <td>~€195.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 3: GROCERY STORES -->
+        <section id="grocery-stores">
+            <h2>Grocery Store Locations (36041 Fulda)</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Supermarket</th>
+                            <th>Address</th>
+                            <th>Key Items</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ALDI SÜD</td>
+                            <td>Kothenbachweg 2-4 (~800m walk)</td>
+                            <td>Mageres Rinderhack, Potatoes, Eggs, Red Lentils</td>
+                        </tr>
+                        <tr>
+                            <td>Lidl</td>
+                            <td>Petersberger Str. 190 (~1.5 km)</td>
+                            <td>Milbona High Protein Yogurts, Frozen Veggies</td>
+                        </tr>
+                        <tr>
+                            <td>dm-drogerie</td>
+                            <td>Bahnhofstraße 26 (~1.2 km)</td>
+                            <td>Peanut/Almond Butter, Bio Naturtofu, Oat Milk</td>
+                        </tr>
+                        <tr>
+                            <td>REWE / EDEKA</td>
+                            <td>Dalbergstr. 29 / Paul-Klee-Str. 71</td>
+                            <td>Alpro Soy Yogurts, Berbere Spice Mix</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 4: EXERCISE -->
+        <section id="exercise">
+            <h2>Activity & Exercise Plan</h2>
+            
+            <h3>Daily Steps</h3>
+            <ul>
+                <li><strong>Target:</strong> 10,000 steps/day</li>
+                <li><strong>Active Calories Burnt:</strong> ~400 - 500 kcal</li>
+            </ul>
+
+            <h3>Heavy Duty (HIT) Workout</h3>
+            <ul>
+                <li><strong>Frequency:</strong> Once Every 7 Days (~20–25 minutes total)</li>
+                <li><strong>Execution:</strong> 1 working set per exercise taken to absolute mechanical failure.</li>
+                <li><strong>Tempo:</strong> 4 seconds lifting, 4 seconds lowering (slow, controlled movements).</li>
+            </ul>
+
+            <div class="table-responsive" style="margin-top: 1rem;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Exercise</th>
+                            <th>Machine / Equipment</th>
+                            <th>Working Sets</th>
+                            <th>Rep Target & Tempo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Leg Press</td>
+                            <td>Machine Hack Squat / Leg Press</td>
+                            <td>1 SET TO FAILURE</td>
+                            <td>6–10 reps (4s up / 4s down)</td>
+                        </tr>
+                        <tr>
+                            <td>2. Romanian Deadlift</td>
+                            <td>Dumbbells or Barbell</td>
+                            <td>1 SET TO FAILURE</td>
+                            <td>6–10 reps (4s up / 4s down)</td>
+                        </tr>
+                        <tr>
+                            <td>3. Chest Press</td>
+                            <td>Machine Press / Incline DB Press</td>
+                            <td>1 SET TO FAILURE</td>
+                            <td>6–10 reps (4s up / 4s down)</td>
+                        </tr>
+                        <tr>
+                            <td>4. Lat Pulldown</td>
+                            <td>Cable Lat Pulldown / Row</td>
+                            <td>1 SET TO FAILURE</td>
+                            <td>6–10 reps (4s up / 4s down)</td>
+                        </tr>
+                        <tr>
+                            <td>5. Shoulder Press</td>
+                            <td>Overhead Machine / DB Press</td>
+                            <td>1 SET TO FAILURE</td>
+                            <td>6–10 reps (4s up / 4s down)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
